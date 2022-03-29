@@ -1,0 +1,146 @@
+:root {
+  --body-bg-color: #121214;
+  --text-color: #E1E1E6;
+  --title-color: #04D361;
+  --form-color: #A8A8A8;
+  --bg-button-color: #8257e5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Spartan', 'Work Sans', sans-serif;
+  font-weight: 400;
+  background: var(--body-bg-color);
+  color: var(--text-color);
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--bg-button-color);
+  border-radius: 2px;
+}
+
+main {
+  display: flex;
+  min-height: 100vh;
+}
+
+main article {
+  padding: 50px 30px;
+  width: 50vw;
+}
+
+main aside {
+  width: 50vw;
+}
+
+main article > img {
+  width: 400px;
+}
+
+main article h2 {
+  margin-top: 90px;
+  margin-bottom: 8px;
+
+  font-family: 'Work sans', sans-serif;
+  font-weight: bold;
+  color: var(--title-color);
+}
+
+main article h4 {
+  margin-bottom: 9px;
+}
+
+main article form {
+  margin: 50px 0px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+main article form label {
+  color: var(--form-color);
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+main article form section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+main article form section input {
+  height: 48px;
+  width: 100%;
+  padding-left: 8px;
+
+  color: #666;
+  font-family: 'Work sans', sans-serif;
+  font-weight: 400;
+
+  border: none;
+  border-left: 8px var(--title-color) solid;
+  outline: none;
+}
+
+main article form section button {
+  height: 48px;
+  width: 50px;
+  background-color: var(--bg-button-color);
+  padding: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  transition: filter 1s;
+}
+
+main article form section button:hover {
+  filter: brightness(80%);
+}
+
+main article a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  font-weight: bold;
+  color: var(--bg-button-color);
+}
+
+main aside img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: right top;
+}
+
+@media (max-width: 830px) {
+  main aside {
+    display: none;
+  }
+
+  main article {
+    width: 100vw;
+  }
+}
+
+@media (max-width: 440px) {
+  main article {
+    padding: 15px;
+  }
+
+  main article > img {
+    width: 300px;
+  }
+}
